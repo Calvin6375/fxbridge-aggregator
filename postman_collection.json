@@ -1,0 +1,128 @@
+{
+  "info": {
+    "name": "FXBridge Aggregator API",
+    "description": "Postman collection for FXBridge Multi-Source Rate Aggregator API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "version": "1.0.0"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/health",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["health"]
+        },
+        "description": "Health check endpoint to verify the service is running"
+      },
+      "response": []
+    },
+    {
+      "name": "Get Rates - USD to EUR",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/rates?base=USD&target=EUR",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["rates"],
+          "query": [
+            {
+              "key": "base",
+              "value": "USD"
+            },
+            {
+              "key": "target",
+              "value": "EUR"
+            }
+          ]
+        },
+        "description": "Get aggregated exchange rates from USD to EUR"
+      },
+      "response": []
+    },
+    {
+      "name": "Get Rates - BTC to USDT",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/rates?base=BTC&target=USDT",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["rates"],
+          "query": [
+            {
+              "key": "base",
+              "value": "BTC"
+            },
+            {
+              "key": "target",
+              "value": "USDT"
+            }
+          ]
+        },
+        "description": "Get aggregated exchange rates from BTC to USDT (crypto)"
+      },
+      "response": []
+    },
+    {
+      "name": "Get Rates - GBP to JPY",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/rates?base=GBP&target=JPY",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["rates"],
+          "query": [
+            {
+              "key": "base",
+              "value": "GBP"
+            },
+            {
+              "key": "target",
+              "value": "JPY"
+            }
+          ]
+        },
+        "description": "Get aggregated exchange rates from GBP to JPY"
+      },
+      "response": []
+    },
+    {
+      "name": "Get Swagger JSON",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/swagger.json",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["swagger.json"]
+        },
+        "description": "Get OpenAPI 3.0 specification in JSON format"
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8080",
+      "type": "string"
+    }
+  ]
+}
+

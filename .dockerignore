@@ -1,0 +1,13 @@
+.dart_tool/
+build/
+.packages
+pubspec.lock
+.env
+*.log
+.git/
+.gitignore
+README.md
+test/
+.vscode/
+.idea/
+
